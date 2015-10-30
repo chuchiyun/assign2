@@ -130,7 +130,7 @@ if(shipY>=450){
    shipY=450;
 }
 if(blood>=225){
-blood=225;
+blood==225;
 }
 if(blood<=30){
     gameState=GAME_LOSE;
