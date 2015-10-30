@@ -32,13 +32,13 @@ void setup(){
   shipImg=loadImage("img/fighter.png");
   speedX=floor(random(2,5));
   speedY=floor(random(-2,2));
-  treasureX=floor(random(30,520));
-  treasureY=floor(random(30,250));
+  treasureX=floor(random(20,620));
+  treasureY=floor(random(20,200));
   backgroundX=0;
-  shipX=510;
-  shipY=120;
-  enemyX=30;
-  enemyY=floor(random(30,440));
+  shipX=610;
+  shipY=220;
+  enemyX=20;
+  enemyY=floor(random(40,440));
   hpX=20;
   hpY=20;
   blood=69;
@@ -87,8 +87,8 @@ void draw(){
       
       speedX=floor(random(2,5));
       speedY=floor(random(-2,2));
-       enemyX=30;
-       enemyY=floor(random(30,440));
+       enemyX=20;
+       enemyY=floor(random(40,440));
     }
   enemyX+=speedX;
   enemyY+=speedY;
@@ -120,19 +120,19 @@ if(leftPressed){
 if(shipX>=610){
    shipX=610;
 }
-if(shipX<=10){
-   shipX=10;
+if(shipX<=20){
+   shipX=20;
 }
-if(shipY<=10){
-   shipY=10;
+if(shipY<=20){
+   shipY=20;
 }
 if(shipY>=450){
    shipY=450;
 }
-if(blood>=250){
-blood=250;
+if(blood>=225){
+blood=225;
 }
-if(blood<=10){
+if(blood<=30){
     gameState=GAME_LOSE;
   }
   break;
@@ -184,18 +184,15 @@ void keyReleased(){
    case UP:
        upPressed=false;
        break;
-   case RIGHT:
-       rightPressed=false;
-       break;
-  
-   
-   case LEFT:
-       leftPressed=false;
-       break;
    case DOWN:
        downPressed=false;
        break;
-  
+   case RIGHT:
+       rightPressed=false;
+       break;
+   case LEFT:
+       leftPressed=false;
+       break;
    }
    }
   }
